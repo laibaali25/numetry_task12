@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email OTP Authentication</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <form id="studentForm">
+      <h3>Student Registration Form</h3>
+      <div class="form-group">
+        <input id="firstN" type="text" placeholder="NAME" name="user_name" required />
+      </div>
+
+      <div class="form-group">
+        <input id="address" type="text" placeholder="ADDRESS" name="user_address" required />
+      </div>
+
+      <div class="form-group">
+        <input id="age" type="text" placeholder="AGE" name="user_age" required />
+      </div>
+
+      <div class="form-group">
+        <input id="phone" type="text" placeholder="PHONE NUMBER" name="user_number" maxLength="10" minLength="10" required />
+      </div>
+
+      <div class="form-group">
+        <input id="email" type="email" placeholder="EMAIL" name="email_id" required />
+      </div>
+
+      <div class="form-group">
+        <input id="password" type="password" placeholder="PASSWORD" name="user_password" required />
+      </div>
+
+      <button type="button" id="sendOtpBtn">Send OTP</button>
+
+      <div class="form-group">
+        <input type="text" id="otpInput" placeholder="Enter OTP" required />
+      </div>
+
+      <button type="button" id="verifyOtpBtn">Verify OTP</button>
+
+      <div id="message"></div>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("4UNUvl4QGWTCG22jF"); // Replace with your EmailJS user ID
+    })();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
